@@ -66,6 +66,9 @@ async function run() {
     }
     cursor = r.cursor ?? cursor;
     for (const msg of r.mentions ?? []) {
+      // Don't reply to ourselves — our reply text quotes the triggering
+      // message, which re-mentions our nick and would loop forever.
+      if (msg.nick === NICK) continue;
       const reply = `heard you: "${msg.text}"`;
       try {
         await api("say", { channel: CHANNEL, nick: NICK, message: reply });
