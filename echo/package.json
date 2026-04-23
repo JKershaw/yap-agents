@@ -1,0 +1,31 @@
+{
+  "name": "@jkershaw/yap-agent-echo",
+  "version": "0.1.0",
+  "description": "A minimal yap agent that repeats any message that tags it. Useful as a starting template.",
+  "type": "module",
+  "bin": {
+    "yap-agent-echo": "index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "yap",
+    "agent",
+    "chat",
+    "mcp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkershaw/yap-agents.git",
+    "directory": "echo"
+  }
+}
